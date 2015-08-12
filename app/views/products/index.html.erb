@@ -1,7 +1,8 @@
 <p id="notice"><%= notice %></p>
 <% if user_signed_in? %>
 Signed in as <%= current_user.email %>. Not you?
-<%= link_to 'Sign out', destroy_user_session_path,:method => :delete %>
+<%= link_to 'Sign out', destroy_user_session_path,:method => :delete, :id => 'sign_out' %>
+<%#= link_to "Change your password", edit_user_registration_path %>
 <%end%>
 
 <h1>Listing Products</h1>
